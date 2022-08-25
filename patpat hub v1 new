@@ -1,0 +1,77 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("patpat hub v1", "Synapse")
+
+-- main
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection:NewButton("SwagMode", "Press this button to load SwagMode", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
+end)
+
+-- local player
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewButton("Infinite Yield", "Just like admin for fe", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+PlayerSection:NewToggle("Super-Human", "Go fast and jump high", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+
+PlayerSection:NewSlider("WalkSpeed", "Makes you go faster", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("JumpPower", "Makes you jump higher", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+PlayerSection:NewButton("Reset WS/JP", "Resets your WalkSpeed and JumpPower back to their original values", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+
+    --Other
+    local Other = Window:NewTab("Other")
+    local OtherSection = Other:NewSection("Other")
+
+    OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+
+    OtherSection:NewButton("Bypassed Fly", "bird mode", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
+
+        Fly(true)
+    end)
+
+    OtherSection:NewButton("Unnamed ESP", "Lets you see players through walls using an ESP script by the name of Unnamed ESP", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/LD5nUGt1'),true))()
+    end)
+
+    OtherSection:NewButton("CMD-X", "Another admin script almost the same as infinite yield but has some different features if you want to have a wider range of commands with fe admin", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))())
+
+    OtherSection:NewButton("RaycodeX", "An auto cash drop and calculate script for da hood", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Cash%20Drop%22)", true))())
+
+    OtherSection:NewButton("CrispyGo Faded", "The faded script that CrispyGo uses i just though i should add it here lol", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/main/YesEpic", true))())
+
+    
+    --Credits
+    local Credits = Window:NewTab("Credits")
+    local CreditsSection = Credits:NewSection("Credits")
+    local CreditsSection = Credits:NewSection("Made by patpat#5331")
