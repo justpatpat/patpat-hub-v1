@@ -74,4 +74,4 @@ end)
     --Credits
     local Credits = Window:NewTab("Credits")
     local CreditsSection = Credits:NewSection("Credits")
-    local CreditsSection = Credits:NewSection("Made by patpat#5331") 
+    local CreditsSection = Credits:NewSection("Made by 狂気#5331") 
